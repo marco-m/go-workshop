@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/marco-m/go-project-templates/helloworld/hello"
 )
 
 func main() {
@@ -13,5 +15,6 @@ func main() {
 }
 
 func run() error {
+	fmt.Println(hello.Greet("bob"))
 	return nil
 }

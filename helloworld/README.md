@@ -14,7 +14,11 @@ It is meant to be observed commit per commit on the `helloworld` branch.
 ├── go.mod
 ├── go.sum
 ├── main.go
-└── main_test.go
+├── main_test.go
+├── bin/          <== build artifacts
+└── hello/        <== the hello package
+    ├── hello.go
+    └── hello_test.go
 ```
 
 ## Build
@@ -30,4 +34,17 @@ $ go build -C bin ..
 
 ```
 $ go test -v .
+```
+
+## Test coverage
+
+Run tests with coverage:
+```
+$ go test -coverprofile=bin/coverage.out ./...
+```
+
+Run tests with coverage and open test coverage in browser:
+```
+$ go test -coverprofile=bin/coverage.out ./... &&
+  go tool cover -html=bin/coverage.out
 ```
