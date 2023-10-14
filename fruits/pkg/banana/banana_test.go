@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-quicktest/qt"
 
-	"github.com/marco-m/go-project-templates/fruits/pkg/banana"
+	"github.com/marco-m/go-workshop/fruits/pkg/banana"
 )
 
 // The simplest possible test.

@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-quicktest/qt"
 
-	"github.com/marco-m/go-project-templates/fruits/pkg/banana"
+	"github.com/marco-m/go-workshop/fruits/pkg/banana"
 )
 
 // Go has built-in support for fuzzing. This shows how easy it is.

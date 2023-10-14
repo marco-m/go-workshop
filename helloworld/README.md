@@ -33,13 +33,14 @@ $ go build -C bin ..
 ## Test
 
 ```
-$ go test -v .
+$ go test -v ./...
 ```
 
 ## Test coverage
 
 Run tests with coverage:
 ```
+$ mkdir bin
 $ go test -coverprofile=bin/coverage.out ./...
 ```
 

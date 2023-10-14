@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/marco-m/go-project-templates/helloworld/hello"
+	"github.com/marco-m/go-workshop/helloworld/hello"
 )
 
 func main() {

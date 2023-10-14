@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-quicktest/qt"
 
-	"github.com/marco-m/go-project-templates/helloworld/hello"
+	"github.com/marco-m/go-workshop/helloworld/hello"
 )
 
 func TestGreetSimple(t *testing.T) {

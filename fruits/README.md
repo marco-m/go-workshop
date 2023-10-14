@@ -67,3 +67,39 @@ $ task --list | grep test:
 * browser:    Show code coverage in browser (usage: task test:<subtarget> browser)
 * test:fuzz:  Run all the fuzz tests. Interrupt with Ctrl-C.
 ```
+
+### Unit tests
+
+This shows the skipping of tests needing special setup:
+
+```
+$ task test:unit
+task: [test:unit] gotestsum -- -count=1 -coverprofile=bin/coverage.out ./...
+∅  internal/parsley
+∅  internal
+∅  cmd/fruits (1ms)
+✓  pkg/banana (177ms) (coverage: 65.4% of statements)
+
+=== Skipped
+=== SKIP: pkg/banana TestBananaIntegration (0.00s)
+    banana_test.go:107: Skipping integration test: missing env var BANANA_TEST_TOKEN
+
+DONE 11 tests, 1 skipped in 0.830s
+```
+
+### All tests
+
+Compare the output with the unit tests:
+
+```
+task test:all
+task: [test:all] gotestsum -- -count=1 -coverprofile=bin/coverage.out ./...
+∅  internal/parsley
+∅  internal
+∅  cmd/fruits (1ms)
+✓  pkg/banana (153ms) (coverage: 65.4% of statements)
+
+DONE 11 tests in 0.536s
+```
+
+In this case, the coverage is the same as the unit tests because test `TestBananaIntegration` is empty.

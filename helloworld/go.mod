@@ -1,4 +1,4 @@
-module github.com/marco-m/go-project-templates/helloworld
+module github.com/marco-m/go-workshop/helloworld
 
 go 1.21.1
 

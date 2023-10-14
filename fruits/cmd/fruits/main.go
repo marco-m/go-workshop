@@ -6,9 +6,9 @@ import (
 
 	"github.com/alexflint/go-arg"
 
-	"github.com/marco-m/go-project-templates/fruits/internal"
-	"github.com/marco-m/go-project-templates/fruits/internal/parsley"
-	"github.com/marco-m/go-project-templates/fruits/pkg/banana"
+	"github.com/marco-m/go-workshop/fruits/internal"
+	"github.com/marco-m/go-workshop/fruits/internal/parsley"
+	"github.com/marco-m/go-workshop/fruits/pkg/banana"
 )
 
 // LinkerVersion must be set by the linker (see Taskfile).
