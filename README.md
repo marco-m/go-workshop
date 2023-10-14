@@ -6,8 +6,11 @@ This repo contains the materials for a WIP Go workshop.
 
 Directory layout:
 
+- [slides](./slides) The slides of the workshop.
+
 - [helloworld](./helloworld) The classic helloworld program.
-- [fruits](./fruits) Example of a small CLI program.
+- [fruits](./fruits) Example of a small CLI program and test patterns.
+- [eventloop](./eventloop) How to test an event loop.
 
 ## gonew templates
 
@@ -33,3 +36,8 @@ $ cd $MYPROJECT
 
 - [Go](https://go.dev/) version >= 1.21
 - [Taskfile](https://taskfile.dev)
+
+## Licenses
+
+- The source code is licensed under the [MIT LICENSE](SOURCE.LICENSE).
+- The slides are licensed under Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
