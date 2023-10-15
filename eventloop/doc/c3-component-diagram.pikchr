@@ -1,0 +1,29 @@
+boxrad = 1mm
+
+Picture: [
+  box "Source" color grey fill lightgrey
+  arrow 200% "webhook" above
+  HServer: box "HTTP" "server"
+  move
+  Loop: box "Event loop"
+  move
+  box "Adapter"
+  arrow 200% "trigger" above "resource check" above
+  box "Destination" color grey fill lightgrey
+
+  HHandler: box "HTTP" "Handler" at 0.6*dist(Source, HServer) heading 180 from HServer
+  move
+  EHandler: box "Event" "Handler"
+
+  arrow from HServer to HHandler chop
+  arrow from HHandler to Loop chop
+  arrow from Loop to EHandler chop
+  arrow from EHandler to Adapter chop
+
+  box height HServer.n.y - HHandler.s.y + linewid \
+    width Adapter.e.x - HServer.w.x + linewid \
+    with .w at (HServer.w.x - 0.5*linewid, HHandler.w.y + 0.5*dist(HServer, HHandler)) \
+    color green
+  text "container" above at last box.n color green
+]
+Title: text "Component diagram for the main container" italic with .n at 15mm above Picture.n

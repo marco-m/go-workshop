@@ -1,0 +1,22 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam legendBackgroundColor #ffffff
+skinparam legendBorderThickness 0
+
+title "Sysyem context diagram (C1) for the webhook demultiplexer"
+
+component [demultiplexer] #lightgreen
+component [GitHub] #azure
+component [Concourse] #azure
+
+[GitHub] -> [demultiplexer]: send webhook\n(HTTP)
+[demultiplexer] -> [Concourse]: query pipelines,\ntrigger resource check\n(HTTP)
+
+legend left
+Legend
+| Color  | Meaning |
+| <#lightgreen> | This system |
+| <#azure> | External systems |
+endlegend
+
+@enduml

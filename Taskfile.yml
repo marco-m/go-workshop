@@ -1,0 +1,109 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  #
+  # As of Go 1.21, we still need to use the linker to embed version information.
+  # See https://github.com/golang/go/issues/50603
+  VERSION: { sh: git describe --long --dirty --always --tags }
+  LDFLAGS: '-ldflags="-X main.LinkerVersion={{.VERSION}}"'
+
+tasks:
+
+  install:deps:
+    desc: Install tool dependencies.
+    cmds:
+      - go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+      - go install gotest.tools/gotestsum@latest
+
+  build:
+    desc: Build the fruits executable
+    cmds:
+      - mkdir -p bin
+      - go build -C bin {{.LDFLAGS}} ../cmd/fruits
+
+  clean:
+    desc: Delete build artifacts
+    cmds:
+      - rm -rf bin
+
+  #
+  # To run tests only for a package:
+  #   go test ./pkg/NAME
+  #
+  # To run tests only matching a glob:
+  #   go test -run "TestGLOB"
+  #
+
+  test:unit:
+    desc: Run the unit tests. Some tests will be listed as "Skipped".
+    cmds:
+      - gotestsum -- -count=1 -coverprofile=bin/coverage.out ./...
+
+  test:all:
+    desc: Run all the tests. No tests will be skipped.
+    cmds:
+      - gotestsum -- -count=1 -coverprofile=bin/coverage.out ./...
+    env:
+      # WARNING: We explicitly set the secret here only to show how the tests use the
+      # Skip() method, without having to require another dependency such as pass or summon
+      # to securely store and read the secret.
+      # DO NOT WRITE SECRETS IN CLEARTEXT!
+      BANANA_TEST_TOKEN: "a-banana-secret"
+
+  test:fuzz:
+    desc: Run all the fuzz tests. Interrupt with Ctrl-C.
+    cmds:
+      - |
+        for i in $(go list ./...)
+        do
+          echo $i
+          go test -fuzz="Fuzz*" $i
+        done
+
+  browser:
+    desc: "Show code coverage in browser (usage: task test:<subtarget> browser)"
+    cmds:
+      - go tool cover -html=bin/coverage.out
+
+  lint:
+    desc: Lint the code.
+    cmds:
+      - golangci-lint run ./...
+
+  docs:
+    desc: Build the docs
+    deps:
+      - images:pikchr
+
+  # {{.USER_WORKING_DIR}} The directory from which task is invoked.
+  # {{.TASKFILE_DIR}}     The absolute path of the included Taskfile.
+  # {{.ROOT_DIR}}         The absolute path of the root Taskfile.
+  images:pikchr:
+    desc: Build all the Pikchr images
+    dir: '{{.USER_WORKING_DIR}}/doc'
+    sources:
+      - "*.pikchr"
+    cmds:
+      - for: sources
+        cmd: |
+          echo Processing: {{.USER_WORKING_DIR}}/doc/{{.ITEM}}
+          if ! {{.PIKCHR}} --svg-only {{.ITEM}} > {{.ITEM}}.svg; then
+              cat {{.ITEM}}.svg
+              exit 1
+          fi
+        silent: true
+    vars:
+      PIKCHR: '{{.ROOT_DIR}}/bin/pikchr'
+
+  build:pikchr:
+    desc: Fetch and build pikchr itself.
+    cmds:
+      - mkdir -p {{.BINDIR}}
+      - wget -O {{.BINDIR}}/pikchr.c https://pikchr.org/home/raw/{{.PIKCHR_SHA}}?at=pikchr.c
+      - gcc -DPIKCHR_SHELL -o {{.BINDIR}}/pikchr {{.BINDIR}}/pikchr.c
+      - rm {{.BINDIR}}/pikchr.c
+    vars:
+      BINDIR: '{{.ROOT_DIR}}/bin'
+      PIKCHR_SHA: 64bf5f887424481b5f716f0b9d5f0cc5b83db97b34c1d4c60b5a92b248c1666b

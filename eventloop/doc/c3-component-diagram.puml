@@ -1,0 +1,28 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam legendBackgroundColor #ffffff
+skinparam legendBorderThickness 0
+
+title "Component diagram (C3) for the webhook demultiplexer"
+
+component [GitHub] #azure
+component [Concourse] #azure
+
+package "demultiplexer" #lightgreen {
+  [HTTP server]
+  frame "event loop" {
+    [custom]
+  }
+  [HTTP server] -> [event loop]
+}
+
+[GitHub] -> [HTTP server]: send webhook\n(HTTP)
+[custom] -> [Concourse]: query pipelines,\ntrigger resource check\n(HTTP)
+
+legend left
+Legend
+| Color  | Meaning |
+| <#lightgreen> | This system |
+| <#azure> | External systems |
+endlegend
+@enduml

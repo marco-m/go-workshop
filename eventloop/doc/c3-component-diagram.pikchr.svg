@@ -1,0 +1,38 @@
+<svg xmlns='http://www.w3.org/2000/svg' class="pikchr" viewBox="0 0 976.32 409.759">
+<path d="M7.82929,220.399L104.491,220.399A5.66929 5.66929 0 0 0 110.16 214.73L110.16,154.069A5.66929 5.66929 0 0 0 104.491 148.399L7.82929,148.399A5.66929 5.66929 0 0 0 2.16 154.069L2.16,214.73A5.66929 5.66929 0 0 0 7.82929 220.399Z"  style="fill:rgb(211,211,211);stroke-width:2.16;stroke:rgb(128,128,128);" />
+<text x="56.16" y="184.399" text-anchor="middle" fill="rgb(128,128,128)" dominant-baseline="central">Source</text>
+<polygon points="254.16,184.399 242.64,188.719 242.64,180.079" style="fill:rgb(0,0,0)"/>
+<path d="M110.16,184.399L248.4,184.399"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="182.16" y="172.699" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">webhook</text>
+<path d="M259.829,220.399L356.491,220.399A5.66929 5.66929 0 0 0 362.16 214.73L362.16,154.069A5.66929 5.66929 0 0 0 356.491 148.399L259.829,148.399A5.66929 5.66929 0 0 0 254.16 154.069L254.16,214.73A5.66929 5.66929 0 0 0 259.829 220.399Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="308.16" y="174.319" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">HTTP</text>
+<text x="308.16" y="194.479" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">server</text>
+<path d="M439.829,220.399L536.491,220.399A5.66929 5.66929 0 0 0 542.16 214.73L542.16,154.069A5.66929 5.66929 0 0 0 536.491 148.399L439.829,148.399A5.66929 5.66929 0 0 0 434.16 154.069L434.16,214.73A5.66929 5.66929 0 0 0 439.829 220.399Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="488.16" y="184.399" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">Event loop</text>
+<path d="M619.829,220.399L716.491,220.399A5.66929 5.66929 0 0 0 722.16 214.73L722.16,154.069A5.66929 5.66929 0 0 0 716.491 148.399L619.829,148.399A5.66929 5.66929 0 0 0 614.16 154.069L614.16,214.73A5.66929 5.66929 0 0 0 619.829 220.399Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="668.16" y="184.399" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">Adapter</text>
+<polygon points="866.16,184.399 854.64,188.719 854.64,180.079" style="fill:rgb(0,0,0)"/>
+<path d="M722.16,184.399L860.4,184.399"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="794.16" y="152.539" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">trigger</text>
+<text x="794.16" y="172.699" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">resource check</text>
+<path d="M871.829,220.399L968.491,220.399A5.66929 5.66929 0 0 0 974.16 214.73L974.16,154.069A5.66929 5.66929 0 0 0 968.491 148.399L871.829,148.399A5.66929 5.66929 0 0 0 866.16 154.069L866.16,214.73A5.66929 5.66929 0 0 0 871.829 220.399Z"  style="fill:rgb(211,211,211);stroke-width:2.16;stroke:rgb(128,128,128);" />
+<text x="920.16" y="184.399" text-anchor="middle" fill="rgb(128,128,128)" dominant-baseline="central">Destination</text>
+<path d="M259.829,371.599L356.491,371.599A5.66929 5.66929 0 0 0 362.16 365.93L362.16,305.269A5.66929 5.66929 0 0 0 356.491 299.599L259.829,299.599A5.66929 5.66929 0 0 0 254.16 305.269L254.16,365.93A5.66929 5.66929 0 0 0 259.829 371.599Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="308.16" y="325.519" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">HTTP</text>
+<text x="308.16" y="345.679" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">Handler</text>
+<path d="M439.829,371.599L536.491,371.599A5.66929 5.66929 0 0 0 542.16 365.93L542.16,305.269A5.66929 5.66929 0 0 0 536.491 299.599L439.829,299.599A5.66929 5.66929 0 0 0 434.16 305.269L434.16,365.93A5.66929 5.66929 0 0 0 439.829 371.599Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="488.16" y="325.519" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">Event</text>
+<text x="488.16" y="345.679" text-anchor="middle" fill="rgb(0,0,0)" dominant-baseline="central">Handler</text>
+<polygon points="308.16,299.599 303.84,288.079 312.48,288.079" style="fill:rgb(0,0,0)"/>
+<path d="M308.16,220.399L308.16,293.839"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="435.82,218.739 431.245,230.16 424.864,224.335" style="fill:rgb(0,0,0)"/>
+<path d="M360.5,301.26L431.937,222.993"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="488.16,299.599 483.84,288.079 492.48,288.079" style="fill:rgb(0,0,0)"/>
+<path d="M488.16,220.399L488.16,293.839"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="615.82,218.739 611.245,230.16 604.864,224.335" style="fill:rgb(0,0,0)"/>
+<path d="M540.5,301.26L611.937,222.993"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M223.829,407.599L752.491,407.599A5.66929 5.66929 0 0 0 758.16 401.93L758.16,118.069A5.66929 5.66929 0 0 0 752.491 112.399L223.829,112.399A5.66929 5.66929 0 0 0 218.16 118.069L218.16,401.93A5.66929 5.66929 0 0 0 223.829 407.599Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,128,0);" />
+<text x="488.16" y="102.319" text-anchor="middle" fill="rgb(0,128,0)" dominant-baseline="central">container</text>
+<text x="488.16" y="17.28" text-anchor="middle" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">Component diagram for the main container</text>
+</svg>
+
