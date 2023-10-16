@@ -1,0 +1,20 @@
+# print help
+exec loadmaster -h
+! stderr .
+cmp stdout help.output.txt
+
+-- help.output.txt --
+This program calculates statistics for Concourse
+Usage: loadmaster [--server SERVER] [--team TEAM] [--timeout TIMEOUT] [--version] <command> [<args>]
+
+Options:
+  --server SERVER        Concourse server URL [default: https://ci.concourse-ci.org]
+  --team TEAM            Concourse team [default: main]
+  --timeout TIMEOUT      timeout for network operations (eg: 1h32m7s) [default: 5s]
+  --version              display version and exit
+  --help, -h             display this help and exit
+
+Commands:
+  build-time             calculate the cumulative build time taken by a pipeline
+
+For more information visit FIXME https://example.org/...

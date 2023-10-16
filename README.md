@@ -10,7 +10,8 @@ Directory layout:
 
 - [helloworld](./helloworld) The classic helloworld program.
 - [fruits](./fruits) Example of a small CLI program and test patterns.
-- [eventloop](./eventloop) How to test an event loop.
+- [loadmaster](./loadmaster) Calculate the cumulative Concourse build times.
+- [loadmasterskeleton](./loadmasterskeleton) Just the skeleton for loadmaster, to write yourself!
 
 ## gonew templates
 
