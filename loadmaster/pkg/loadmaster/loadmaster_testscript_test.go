@@ -33,7 +33,7 @@ func makeBuildTimeVcr() func() int {
 	return func() int {
 		ctx := context.Background()
 		rec, err := recorder.NewWithOptions(&recorder.Options{
-			CassetteName:       "list-pipeline-builds-short",
+			CassetteName:       "list-pipeline-builds",
 			Mode:               recorder.ModeReplayOnly,
 			RealTransport:      http.DefaultTransport,
 			SkipRequestLatency: true,
