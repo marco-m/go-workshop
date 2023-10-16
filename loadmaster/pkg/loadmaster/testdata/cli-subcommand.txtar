@@ -1,0 +1,8 @@
+# wants subcommand
+! exec loadmaster
+! stderr .
+cmp stdout usage.output.txt
+
+-- usage.output.txt --
+Usage: loadmaster [--server SERVER] [--team TEAM] [--timeout TIMEOUT] [--version] <command> [<args>]
+error: missing subcommand
