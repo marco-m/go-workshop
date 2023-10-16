@@ -1,0 +1,51 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: ci.concourse-ci.org
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://ci.concourse-ci.org/api/v1/teams/main/pipelines/concourse/builds
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            [{"id":214953806,"team_name":"main","name":"575","status":"started","api_url":"/api/v1/builds/214953806","job_name":"dev-image","pipeline_id":24,"pipeline_name":"concourse","start_time":1697465265},{"id":214953805,"team_name":"main","name":"402","status":"succeeded","api_url":"/api/v1/builds/214953805","job_name":"quickstart-smoke","pipeline_id":24,"pipeline_name":"concourse","start_time":1697465265,"end_time":1697465515}]
+        headers:
+            Cache-Control:
+                - no-store, private
+            Content-Type:
+                - application/json
+            Date:
+                - Mon, 16 Oct 2023 14:22:36 GMT
+            Link:
+                - <https://ci.concourse-ci.org/api/v1/teams/main/pipelines/concourse/builds?to=214442133&limit=100>; rel="next"
+            Vary:
+                - Accept-Encoding
+            X-Concourse-Version:
+                - 0.0.0-dev
+            X-Content-Type-Options:
+                - nosniff
+            X-Download-Options:
+                - noopen
+            X-Xss-Protection:
+                - 1; mode=block
+        status: 200 OK
+        code: 200
+        duration: 2.7483955s

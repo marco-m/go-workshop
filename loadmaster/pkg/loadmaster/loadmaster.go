@@ -3,6 +3,7 @@ package loadmaster
 import (
 	"context"
 	"fmt"
+	"net/http"
 	"os"
 	"time"
 
@@ -24,8 +25,9 @@ type Global struct {
 	Server  string        `help:"Concourse server URL"`
 	Team    string        `help:"Concourse team"`
 	Timeout time.Duration `help:"timeout for network operations (eg: 1h32m7s)"`
+	Version bool          `help:"display version and exit"`
 	//
-	Version bool `help:"display version and exit"`
+	HttpClient *http.Client `arg:"-"` // Overridable for tests.
 }
 
 func (Args) Description() string {
@@ -74,7 +76,7 @@ func run(cmdLine []string) error {
 
 	switch {
 	case args.BuildTime != nil:
-		return cmdBuildTime(ctx, args.Global, args.BuildTime)
+		return CmdBuildTime(ctx, args.Global, args.BuildTime)
 	default:
 		return fmt.Errorf("internal error: unwired subcommand: %s", argParser.Subcommand())
 	}
