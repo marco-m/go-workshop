@@ -44,14 +44,37 @@ Please take the time to follow the instructions in the next slide. It will reduc
 
 #polylux-slide[
 == Getting started: before the workshop (2)
+1. Install the #link("https://go.dev/learn")[latest Go]\; do not use the one from your distribution.
+2. Do not set any Go environment variable (`$GOPATH`, `$GOBIN`, ...).
+3. Add two directories to your `$PATH`:
+  - The path to the `bin` directory where you installed Go in step 1 (example: `/usr/local/go/bin`).
+  - `$HOME/go/bin`. This is where `go install` will put executables.
+]
 
-- Take the time to #link("https://go.dev/learn")[install the latest Go]\; do not use the one from your distribution.
-- Do not set any environment variable (`$GOPATH`, `$GOBIN`, ...).
-- Take the time to #link("https://go.dev/doc/editors")[configure your editor] correctly.
+#polylux-slide[
+== Getting started: before the workshop (3)
+4. Verify that `$PATH` is now set correctly:
+  - The shell should find the `go` executable and the version should match what you installed in step 1:
+    ```
+    $ which go
+    /usr/local/go/bin/go
+    $ go version
+    ```
+  - Install the `gotestsum` test runner and verify that you can find it:
+    ```
+    $ go install gotest.tools/gotestsum@latest
+    $ which gotestsum
+    $HOME/go/bin/gotestsum
+    ```
+]
+
+#polylux-slide[
+== Getting started: before the workshop (4)
+5. Take the time to #link("https://go.dev/doc/editors")[configure your editor] correctly.
 
 Then, follow these two official tutorials:
-- #link("https://go.dev/doc/tutorial/getting-started")[Tutorial: Get started with Go]
-- #link("https://go.dev/doc/tutorial/create-module")[Tutorial: Create a Go module]
+6. #link("https://go.dev/doc/tutorial/getting-started")[Tutorial: Get started with Go]
+7. #link("https://go.dev/doc/tutorial/create-module")[Tutorial: Create a Go module]
 ]
 
 #polylux-slide[
