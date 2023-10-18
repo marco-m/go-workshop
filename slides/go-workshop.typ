@@ -388,40 +388,42 @@ with minutes and seconds are always 2 digits, while the hours are the minimum di
 #polylux-slide[
 == Online
 More or less in suggested reading order:
-- #link("https://go.dev/tour/welcome/1")[A tour of Go]
-- #link("https://gobyexample.com/")[Go by Example]
-- #link("https://go.dev/doc/effective_go")[Effective Go]
-- #link("https://go.dev/doc/tutorial")[Go Tutorials]
-- #link("https://go.dev/doc/")[Overview of the documentation]
-- #link("https://go.dev/blog/")[The Go blog]
+#columns(2)[
+- #link("https://go.dev/tour/welcome/1")[A tour of Go].
+- #link("https://gobyexample.com/")[Go by Example].
+- #link("https://go.dev/doc/effective_go")[Effective Go].
+- #link("https://go.dev/doc/tutorial")[Go Tutorials].
+- #link("https://go.dev/doc/")[Documentation overview].
+- #link("https://go.dev/blog/")[The Go blog].
 
-- #link("https://yourbasic.org/golang/")[Your Basic: Go] Very good!
-- #link("https://bitfieldconsulting.com/golang/")[Bitfield Consulting: Go] very verbose but good, start from the oldest post and proceed
+- #link("https://yourbasic.org/golang/")[Your Basic: Go]. Very good!
+- #link("https://bitfieldconsulting.com/golang/")[Bitfield Consulting: Go]. Verbose but good, start from the oldest post.
+]
 ]
 
 #polylux-slide[
 == Books
-- #link("https://lets-go.alexedwards.net/")[Let's Go] Build a web app in Go, step by step, server-side rendering with some JavaScript. Very good.
-- #link("https://lets-go-further.alexedwards.net/")[Let's Go further] Build a web API in Go. Very good.
+- #link("https://lets-go.alexedwards.net/")[Let's Go]. Build a web app in Go, step by step, server-side rendering with some JavaScript. Very good.
+- #link("https://lets-go-further.alexedwards.net/")[Let's Go further]. Build a web API in Go. Very good.
 ]
 
 #polylux-slide[
 == Videos
 - All talks from Liz Rice, she is super. For example:
-    - #link("https://www.youtube.com/watch?v=8fi7uSYlOdc")[Containers from scratch]
-    - #link("https://www.youtube.com/watch?v=ZrpkrMKYvqQ")[Debuggers from scratch]
-    - #link("https://www.youtube.com/watch?v=uBqRv8bDroc")[Beginner guide to eBPF programming with Go]
+  - #link("https://www.youtube.com/watch?v=8fi7uSYlOdc")[Containers from scratch].
+  - #link("https://www.youtube.com/watch?v=ZrpkrMKYvqQ")[Debuggers from scratch].
+  - #link("https://www.youtube.com/watch?v=uBqRv8bDroc")[Beginner guide to eBPF programming with Go].
 ]
 
 #polylux-slide[
 == Free Trainings
-- #link("https://exercism.org/tracks/go")[Exercism, the Go track] Good.
-- #link("https://quii.gitbook.io/learn-go-with-tests/")[Learn Go with tests] TDD! very good.
-- #link("https://gophercises.com/")[Gophercises] Did not take it but author is good, so I assume course is good.
+- #link("https://exercism.org/tracks/go")[Exercism, the Go track]. Good.
+- #link("https://quii.gitbook.io/learn-go-with-tests/")[Learn Go with tests]. TDD! very good.
+- #link("https://gophercises.com/")[Gophercises]. Did not take it but author is good, so I assume course is good.
 ]
 
 #polylux-slide[
 == Paying Trainings
-- #link("https://www.ardanlabs.com/training/")[Ardan Labs] Very good. I followed the videos (the cheapest option).
-- #link("https://codecrafters.io/")[CodeCrafters] Build your own Redis, Git, Docker, SQLite from scratch.
+- #link("https://www.ardanlabs.com/training/")[Ardan Labs]. Very good. I followed the videos (the cheapest option).
+- #link("https://codecrafters.io/")[CodeCrafters]. Very good. Build your own Redis, Git, Docker, SQLite from scratch.
 ]
